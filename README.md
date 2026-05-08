@@ -1,4 +1,4 @@
-# Hikmah Labs Skills
+# Hikmah Labs Plugins
 
 Claude Code plugins and agent skills built and maintained by [Hikmah Labs](https://hikmahlabs.com).
 
@@ -7,7 +7,7 @@ Claude Code plugins and agent skills built and maintained by [Hikmah Labs](https
 Add the marketplace:
 
 ```
-/plugin marketplace add hikmahlabs/hikmah-labs-skills
+/plugin marketplace add hikmahlabs/plugins
 ```
 
 Install a plugin:
@@ -22,8 +22,8 @@ Once installed, the skill is auto-discoverable — Claude will invoke it when yo
 
 | Plugin                                                               | Description                                                                                                                                                                 |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`general-translation`](./plugins/general-translation/README.md)     | Set up `gt-next` i18n in a Next.js App Router app — `<GTProvider>` placement, `<T>`/`<Var>`/`t()` patterns, ESLint + smoke-test enforcement, locale switching, RTL.         |
-| [`stripe-convex-webhook`](./plugins/stripe-convex-webhook/README.md) | Host a Stripe webhook on a Convex `httpAction` — no `stripe listen` tunnel needed in dev. Covers signature verification, internal-mutation conversion, and Dashboard setup. |
+| [`general‑translation`](./plugins/general-translation/README.md)     | Set up `gt-next` i18n in a Next.js App Router app — `<GTProvider>` placement, `<T>`/`<Var>`/`t()` patterns, ESLint + smoke-test enforcement, locale switching, RTL.         |
+| [`stripe‑convex‑webhook`](./plugins/stripe-convex-webhook/README.md) | Host a Stripe webhook on a Convex `httpAction` — no `stripe listen` tunnel needed in dev. Covers signature verification, internal-mutation conversion, and Dashboard setup. |
 
 ## Cursor / other agents
 

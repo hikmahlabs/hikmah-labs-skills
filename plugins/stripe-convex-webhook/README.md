@@ -5,7 +5,7 @@ Claude Code plugin for hosting Stripe webhooks on a [Convex](https://convex.dev)
 ## Install
 
 ```
-/plugin marketplace add hikmahlabs/hikmah-labs-skills
+/plugin marketplace add hikmahlabs/plugins
 /plugin install stripe-convex-webhook
 ```
 

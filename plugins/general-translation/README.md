@@ -5,7 +5,7 @@ Claude Code plugin for integrating [General Translation](https://generaltranslat
 ## Install
 
 ```
-/plugin marketplace add hikmahlabs/hikmah-labs-skills
+/plugin marketplace add hikmahlabs/plugins
 /plugin install general-translation
 ```
 
