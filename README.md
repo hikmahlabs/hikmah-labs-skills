@@ -24,6 +24,7 @@ Once installed, the skill is auto-discoverable — Claude will invoke it when yo
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`general‑translation`](./plugins/general-translation/README.md)     | Set up `gt-next` i18n in a Next.js App Router app — `<GTProvider>` placement, `<T>`/`<Var>`/`t()` patterns, ESLint + smoke-test enforcement, locale switching, RTL.         |
 | [`stripe‑convex‑webhook`](./plugins/stripe-convex-webhook/README.md) | Host a Stripe webhook on a Convex `httpAction` — no `stripe listen` tunnel needed in dev. Covers signature verification, internal-mutation conversion, and Dashboard setup. |
+| [`draft‑plugin`](./plugins/draft-plugin/README.md)                   | Scaffold a new plugin into this marketplace from the current session — confirmation flow, file templates, and `marketplace.json` + root-README updates. Writes files only; never touches git.                    |
 
 ## Cursor / other agents
 
