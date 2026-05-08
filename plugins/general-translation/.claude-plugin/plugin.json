@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Set up or extend General Translation (gt-next) i18n in a Next.js App Router app — GTProvider placement, <T>/<Var>/t() patterns, useOptionalGT, ESLint + smoke-test enforcement, locale switching, RTL, backend error codes, and migration workflow.",
   "author": {
-    "name": "Modou Lo",
-    "email": "modoulo99@gmail.com"
+    "name": "Muhammad Lo",
+    "email": "hiqmalabs@gmail.com"
   },
   "homepage": "https://github.com/hikmahlabs/hikmah-labs-skills",
   "license": "MIT"

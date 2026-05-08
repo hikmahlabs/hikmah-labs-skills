@@ -12,6 +12,11 @@
       "name": "general-translation",
       "source": "./plugins/general-translation",
       "description": "Set up or extend General Translation (gt-next) i18n in a Next.js App Router app — covers GTProvider placement, <T>/<Var>/t() patterns, ESLint + smoke-test enforcement, locale switching, RTL, and the full app-translation migration workflow."
+    },
+    {
+      "name": "stripe-convex-webhook",
+      "source": "./plugins/stripe-convex-webhook",
+      "description": "Set up (or migrate to) a Stripe webhook hosted on a Convex HTTP endpoint instead of a Next.js API route — Convex httpAction pattern with constructEventAsync, internal-mutation conversion, .convex.site URL discovery, env-var audit, and Stripe Dashboard setup. Removes the need for `stripe listen` in dev."
     }
   ]
 }
