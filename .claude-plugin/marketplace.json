@@ -26,7 +26,7 @@
     {
       "name": "dev-lifecycle",
       "source": "./plugins/dev-lifecycle",
-      "description": "End-to-end development lifecycle commands — idea → classified GitHub issue on a Projects board → worktree → PR → squash-merge. Ships /intake, /triage, /start, /preflight, /open-pr (config-driven via a per-repo .github/dev-workflow.yml). Auto-flags sensitive diffs for human review; reviews stay local; merging auto-deploys. Pairs with the hikmahlabs/project-template repo for the GitHub layer + bootstrap script."
+      "description": "End-to-end development lifecycle for any repo — idea → classified GitHub issue on a Projects board → worktree → PR → squash-merge. Run /adopt once to lay the GitHub scaffolding (issue forms, PR template, labels, CI, board bootstrap) into a new or existing repo, then drive features with /intake, /triage, /start, /preflight, /open-pr (config-driven via .github/dev-workflow.yml). Auto-flags sensitive diffs for human review; reviews stay local; merging auto-deploys. Self-contained — no companion repo needed."
     }
   ]
 }

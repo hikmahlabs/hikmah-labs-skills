@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # App dependencies — grouped weekly to keep PR noise low.
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: ['type:chore', 'area:infra']
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      # Patch/minor bumps land as one PR; majors come separately for review.
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+
+  # GitHub Actions used by our workflows.
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: weekly
+      day: monday
+    labels: ['type:chore', 'area:infra']
+    commit-message:
+      prefix: chore
