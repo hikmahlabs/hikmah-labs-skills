@@ -29,9 +29,10 @@ done < <(find "$TPL" -type f)
 chmod +x scripts/bootstrap-project.sh 2>/dev/null
 ```
 
-Bundled scaffolding: `.github/` (issue forms, PR template, CODEOWNERS, labels.yml, dependabot,
-dev-workflow.yml, ci.yml), `scripts/bootstrap-project.sh`, `.claude/commands/review.md`,
-`CONTRIBUTING.md`, `CLAUDE.md`.
+Bundled scaffolding: `.github/` (issue forms, PR template, CODEOWNERS, labels.yml, dev-workflow.yml,
+ci.yml), `scripts/bootstrap-project.sh`, `.claude/commands/review.md`, `CONTRIBUTING.md`, `CLAUDE.md`.
+No routine `dependabot.yml` is shipped — the bootstrap enables Dependabot **security updates** instead
+(PRs only for real advisories), so projects don't get noisy weekly bump PRs.
 
 ### Special handling
 

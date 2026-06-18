@@ -195,6 +195,14 @@ else
 fi
 
 # =====================================================================
+bold "5. Dependabot (security-only — no routine version-bump PRs)"
+# =====================================================================
+# We deliberately do NOT ship a dependabot.yml (routine weekly bumps are noisy).
+# Instead enable security updates: Dependabot opens a PR only for a real advisory.
+gh api -X PUT "repos/$OWNER/$REPO/vulnerability-alerts" >/dev/null 2>&1 && ok "Dependabot alerts on" || warn "could not enable alerts (admin needed)"
+gh api -X PUT "repos/$OWNER/$REPO/automated-security-fixes" >/dev/null 2>&1 && ok "security updates on" || warn "could not enable security updates (admin needed)"
+
+# =====================================================================
 bold "Done. Finish these one-time UI steps (not scriptable):"
 # =====================================================================
 cat <<EOF
