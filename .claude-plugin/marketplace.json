@@ -22,6 +22,11 @@
       "name": "draft-plugin",
       "source": "./plugins/draft-plugin",
       "description": "Scaffold a new plugin into the local hikmahlabs/plugins marketplace based on a pattern from the current session — 9-step flow with confirmation prompts, file templates for plugin.json/README/SKILL/references, and the marketplace.json + root README updates (including the U+2011 non-breaking-hyphen rule). Writes files only; never touches git."
+    },
+    {
+      "name": "dev-lifecycle",
+      "source": "./plugins/dev-lifecycle",
+      "description": "End-to-end development lifecycle commands — idea → classified GitHub issue on a Projects board → worktree → PR → squash-merge. Ships /intake, /triage, /start, /preflight, /open-pr (config-driven via a per-repo .github/dev-workflow.yml). Auto-flags sensitive diffs for human review; reviews stay local; merging auto-deploys. Pairs with the hikmahlabs/project-template repo for the GitHub layer + bootstrap script."
     }
   ]
 }

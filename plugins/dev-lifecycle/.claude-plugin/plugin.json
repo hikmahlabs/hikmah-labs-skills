@@ -1,0 +1,11 @@
+{
+  "name": "dev-lifecycle",
+  "version": "1.0.0",
+  "description": "End-to-end development lifecycle commands — idea → classified GitHub issue on a Projects board → worktree → PR → squash-merge. Ships /intake, /triage, /start, /preflight, /open-pr (config-driven via a per-repo .github/dev-workflow.yml). Auto-flags sensitive diffs for human review; reviews stay local; merging auto-deploys. Pairs with the hikmahlabs/project-template repo for the GitHub layer + bootstrap script.",
+  "author": {
+    "name": "Muhammad Lo",
+    "email": "hiqmalabs@gmail.com"
+  },
+  "homepage": "https://github.com/hikmahlabs/plugins",
+  "license": "MIT"
+}
