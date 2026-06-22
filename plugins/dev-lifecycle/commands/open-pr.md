@@ -39,8 +39,19 @@ Read `.github/dev-workflow.yml` → `repo.*`, `project.number`, `sensitivePaths`
    ```
 6. **Classify** — copy the linked issue's `type:*` / `priority:*` / `area:*` labels onto the PR
    (`gh pr edit <pr#> --add-label ...`). If step 4 flagged it, also `--add-label needs-human-review`.
-7. **Board** — add the PR to project `number` and set Stage → **In Review** (or **Needs Human
-   Review** if flagged). Non-blocking if field resolution fails.
+7. **Board** — add the PR to project `number`, then set **BOTH** single-select fields on the card
+   (the board has two: the built-in **Status** that the default column view groups by, and the
+   custom **Stage**):
+   - **Stage** (custom) → **In Review** (or **Needs Human Review** if step 4 flagged it).
+   - **Status** (built-in — only Todo / In Progress / Done) → **In Progress**. "In Review" / "Needs
+     Human Review" aren't Status options; the work stays In Progress until the PR merges (merge →
+     the board's built-in workflow sets Status = Done). Stage→Status mapping: **Backlog/Ready → Todo
+     · In Progress/In Review/Needs Human Review → In Progress · Done → Done.**
+
+   Resolve IDs via `gh project field-list <number> --owner <owner> --format json`, then one
+   `gh project item-edit ...` **per field** — setting only Stage leaves the card stuck in its old
+   Status column. Non-blocking if field resolution genuinely fails.
+
 8. **Report** — print the PR URL and a one-line summary. If it's `needs-human-review`, say so plainly
    so the human knows to look before merging. Merging the PR (squash) is the final human step — it
    auto-deploys and closes the issue; there is no separate ship command.

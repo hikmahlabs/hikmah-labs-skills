@@ -26,9 +26,21 @@ Read `.github/dev-workflow.yml` for `repo.owner`, `repo.name`, `project.number`,
    ```bash
    gh issue edit <n> --repo <owner>/<name> --add-assignee @me
    ```
-4. **Move board Stage → In Progress** (resolve IDs via `gh project field-list`/`item-edit`; if the
-   item isn't on the board yet, `gh project item-add <number> --owner <owner> --url <issue-url>`
-   first). If field resolution fails, note it and continue — it's non-blocking.
+4. **Move the board card to In Progress — set BOTH single-select fields.** GitHub Projects boards
+   have a built-in **Status** field (Todo / In Progress / Done — this is the default column
+   grouping you see) AND this repo's custom **Stage** field (Backlog / Ready / In Progress / …).
+   You MUST set **both** to "In Progress". Setting only Stage leaves the card visually parked in
+   "Todo" — that's the recurring mistake; don't repeat it.
+   - List fields + option IDs: `gh project field-list <number> --owner <owner> --format json`.
+   - Get the item ID: `gh project item-list <number> --owner <owner> --format json` (match the
+     issue number).
+   - Then run one `gh project item-edit --id <item-id> --project-id <project-id> --field-id
+<field-id> --single-select-option-id <option-id>` **per field**.
+   - Rule of thumb: set **every** single-select field on the card that offers an "In Progress"
+     option — that covers both Status and Stage and any future board fields.
+   - **Verify** afterward by re-reading the item and confirming both fields read "In Progress".
+   - If the item isn't on the board yet, `gh project item-add <number> --owner <owner> --url
+<issue-url>` first. If field resolution genuinely fails, note it and continue — non-blocking.
 5. **Summarize the plan** in 2–4 bullets so we start aligned, then begin implementing.
 
 ## Rules
